@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import Searchbar from "./Searchbar/Searchbar";
 import { ImageGallery } from "./ImageGallery/ImageGallery";
 import { Button } from "./Button/Button";
-import { Circles } from 'react-loader-spinner';
+import { Loading } from './Loader/Loader'
 import Notiflix from 'notiflix';
 
  class App extends Component {
@@ -72,16 +72,7 @@ this.setState({page:1,photos:0})
 return (<>
    <Searchbar onSubmit={this.onSubmit}/>
    {this.state.searchQuery && <ImageGallery imgList={this.state.photos}/>}
-   {this.state.load === 'going' && <Circles
-  height="80"
-  width="80"
-  marginLeft="auto" 
-  color="grey"
-  ariaLabel="circles-loading"
-  wrapperStyle={{}}
-  wrapperClass=""
-  visible={true}
-/>}
+   {this.state.load === 'going' && <Loading/>}
    {this.state.totalHits / this.state.page > 12 && <Button btnClick={this.btnClick}/>}
 
 

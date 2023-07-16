@@ -1,4 +1,4 @@
-
+import { Circles } from 'react-loader-spinner';
 export function Loading(){
     return(<Circles
         height="80"
