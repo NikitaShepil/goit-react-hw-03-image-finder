@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import Searchbar from "./Searchbar/Searchbar";
 import { ImageGallery } from "./ImageGallery/ImageGallery";
 import { Button } from "./Button/Button";
-import { Circles } from 'react-loader-spinner'
+import { Circles } from 'react-loader-spinner';
 import Notiflix from 'notiflix';
 
  class App extends Component {
